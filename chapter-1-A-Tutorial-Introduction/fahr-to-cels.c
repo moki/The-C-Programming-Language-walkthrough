@@ -12,7 +12,6 @@ int main() {
   lower = 0; // lower limit of temperature table /
   upper = 300; // upper limit
   step = 20; // step size
-
   fahr = lower;
   printf("%10s %7s\n", "Fahrenheit", "Celsius"); // Exercise 1-3
   while (fahr <= upper) {

@@ -43,6 +43,8 @@ $ ./hello-world
 If not replace gcc with whatever compiler you use
 (refer to it's documentation in case of errors)
 
+---
+
 ## 1.2 Variables and Arithmetic Expressions
 Program to list Fahrenheit temperatures from 0 to 300 with 20 step and equivalents of each in Celsius, refer to fahr-to-cels.c
 
@@ -119,7 +121,7 @@ int int_val_1, int_val_2;
 float float_val_1, float_val_2;
 ```
 
-4. **While** - while() construct
+4. **While** - while() {} construct
 
     Repeats code between {}, as long as condition(expression in parenthesis) evaluates to true.
     One may also omit curly braces if body of the while loop consists of single statement, write body from the new line indent by one tab.
@@ -195,4 +197,56 @@ $ ./fahr-to-cels
 $ gcc -o cels-to-fahr cels-to-fahr.c
 
 $ ./cels-to-fahr
+```
+
+---
+
+## 1.3 The For Statement
+There is alot of ways to write this program lets try do it using the for loop.
+
+### Key points:
+
+1. **For loop** - for () {} construct.
+
+    ```
+    for (init; condition; increment) {
+      // statements to repeat
+    }
+    ```
+
+2.  **Variable <-> expression** - in any context where it is permissible to use the value of a variable of some type, you can use a more complicated expression of that type.
+
+    replace: 
+
+    ```
+    printf("%3d %7.1f\n", fahr, cels);
+    ```
+
+    with:
+
+    ```
+    printf("%3d %7.1f\n", fahr, (5.9 / 9.0) * (fahr - 32));
+    ```
+
+### Compile and run the code:
+
+Assuming one uses gcc as a compiler run in shell:
+
+```
+$ gcc -o for-fahr-to-cels for-fahr-to-cels.c
+
+$ ./for-fahr-to-cels
+```
+
+### Exercises:
+
+#### Exercise 1-5
+  Refer to **reverse-fahr-to-cels.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o reverse-fahr-to-cels reverse-fahr-to-cels.c
+
+$ ./reverse-fahr-to-cels
 ```
