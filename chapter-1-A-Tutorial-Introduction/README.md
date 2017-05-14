@@ -250,3 +250,33 @@ $ gcc -o reverse-fahr-to-cels reverse-fahr-to-cels.c
 
 $ ./reverse-fahr-to-cels
 ```
+
+---
+
+## 1.4 Symbolic Constants
+Magic numbers in your program and how to deal with them.
+
+### Key points:
+
+1. **#define** - defines a **symbolic name** or **symbolic constant**
+    
+    **name** has the same form as a variable name: a sequence of letters and digits that begins with a letter.
+
+    ```
+    #define name replacement-text
+    ```
+
+    Thereafter, any occurrence of **name** will be replaced by the corresponding **replacement** text.
+
+    **name** conventionally written in UPPER_CASE.
+
+    **replacement-text** can be any sequence of characters.
+
+### Compile and run the code:
+
+Assuming one uses gcc as a compiler run in shell:
+
+```
+$ gcc -o const-fahr-to-cels const-fahr-to-cels.c
+
+$ ./const-fahr-to-cels
