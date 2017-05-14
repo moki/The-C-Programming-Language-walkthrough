@@ -280,3 +280,40 @@ Assuming one uses gcc as a compiler run in shell:
 $ gcc -o const-fahr-to-cels const-fahr-to-cels.c
 
 $ ./const-fahr-to-cels
+```
+
+---
+
+## 1.5 Character Input and Output
+Text input and output processed with streams using stdio lib.
+
+### Key points:
+
+1. **stdio** - **text** input/output is dealt with as **streams of characters** 
+    
+    **Text stream** is a sequence of characters divided into lines; **each line** consists of **zero or more characters** followed by a **newline character**.
+
+    #### API:
+
+    ##### getchar()
+
+      * reads **next input character** from a **text stream** and **returns it** as a value
+
+      ```
+      c = getchar();
+      ```
+
+      The chars normally come from the keyboard
+
+    ##### putchar()
+      
+      * **prints a character** everytime it is called
+
+      ```
+      putchar(c);
+      ```
+
+      **Prints** the contents of the **int variable c as a character**, usually on the screen
+
+      Calls to **putchar** and **printf** may be interleaved, the **output** will **appear** in the **order in which the calls are made**.
+      
