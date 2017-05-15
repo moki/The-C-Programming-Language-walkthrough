@@ -488,3 +488,20 @@ Counting input characters.
 4. The way to **cope** with **big numbers** is to use **long** integer type or **even bigger** numbers **double** float type.
 
 5. **While** and **For** Loops run test condition at their top.
+
+
+### Compile and run the code:
+
+Assuming one uses gcc as a compiler run in shell:
+
+```
+$ gcc -o count-char-v1 count-char-v1.c
+
+$ ./count-char-v1
+```
+
+```
+$ gcc -o count-char-v2 count-char-v2.c
+
+$ ./count-char-v2
+```
