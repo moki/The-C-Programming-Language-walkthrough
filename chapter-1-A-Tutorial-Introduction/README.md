@@ -8,7 +8,7 @@ Hello world program, refer to hello-world.c
 
 1. **main** is a special function with which execution of your program starts.
 ```
-main() {
+int main() {
   /*
      code of the program
   */
@@ -316,4 +316,116 @@ Text input and output processed with streams using stdio lib.
       **Prints** the contents of the **int variable c as a character**, usually on the screen
 
       Calls to **putchar** and **printf** may be interleaved, the **output** will **appear** in the **order in which the calls are made**.
-      
+
+---
+
+## 1.5.1 File Copying
+Given getchar and putchar, you can write a surprising amount of useful code without knowing anything more about input and output.
+
+### Key points:
+
+1. Relational operator **!=** means **not equal to**.
+
+2. What appears to be a **character** on the **keyboard or screen** is of course, like everything else, **stored internally just as bit pattern**.
+    
+    Type char is specifically meant for storing such character data, but any integer type can be used.
+3. **getchar()** returns **EOF**, when there is no input it stands for **End Of File**
+
+    **Variable c** in example below is of type int because **c** have to be big enough to hold **EOF** in addition to any possible **char**.
+
+4. **EOF** is an integer defined in **stdio** 
+
+5. In **C any assignment** such as
+
+    > c = getchar();
+
+    is an **expression** and **has a value**, which is the **value** of the **left** hand side **after assignment**. This means assignment can appear as part of a larger expression.
+
+    ```
+    while ((c = getchar()) != EOF)
+    ```
+
+    **Parenthesis** around assignment is **necessary**, because the **precedence** of **!=** is **higher** than that of **=**
+    
+    Which will lead us to **undesired results** such as 1 or 0 value being set to the **c** variable.
+
+Simplest example would be a program that copies its input to output one character at a time. 
+
+### Pseudocode:
+
+> read a character
+>
+> while  (character is not end-of-file indicator)
+>
+> &nbsp;&nbsp; output the character just read
+>
+> &nbsp;&nbsp; read a character
+
+### Example in C:
+
+```
+#include <stdio.h>
+
+int main() {
+  int c;
+
+  c = getchar();
+
+  while(c != EOF) {
+    putchar(c);
+    c = getchar();
+  }
+}
+```
+
+### Improved Example in C:
+
+```
+#include <stdio.h>
+
+int main() {
+  int c;
+
+  while((c = getchar()) != EOF) {
+    putchar(c);
+  }
+}
+```
+
+### Compile and run the code:
+
+Assuming one uses gcc as a compiler run in shell:
+
+```
+$ gcc -o file-copy file-copy.c
+
+$ ./file-copy
+```
+
+### Exercises:
+
+#### Exercise 1-6
+  Verify that the expression getchar() != EOF is 0 or 1.
+
+  Refer to **verify-EOF.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o verify-EOF verify-EOF.c
+
+$ ./verify-EOF
+```
+
+#### Exercise 1-7
+  Write a program to print the value of EOF.
+
+  Refer to **print-EOF.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o print-EOF print-EOF.c
+
+$ ./print-EOF
+```
