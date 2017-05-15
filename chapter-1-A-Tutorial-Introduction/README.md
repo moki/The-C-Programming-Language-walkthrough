@@ -429,3 +429,62 @@ $ gcc -o print-EOF print-EOF.c
 
 $ ./print-EOF
 ```
+
+---
+
+## 1.5.2 Character Counting
+Counting input characters.
+
+### Key points:
+
+1. **++variable_name** statement - presents a new operator, **++**, which means **increment** variable value by one.
+
+    Example usage:
+
+    ```
+    ++variable;
+    ```
+
+    You could instead write:
+
+    ```
+    variable = variable + 1;
+    ```
+
+    But former is more concise and often more efficient.
+
+ 2. **--variable_name** statement - which is operator to **decrement** variable value by one.
+
+    Example usage:
+
+    ```
+    --variable;
+    ```
+
+    You could instead write:
+
+    ```
+    variable = variable - 1;
+    ```
+
+    But former is more concise and often more efficient.
+
+3. Above operators can be,
+  
+    either **prefix** operators:
+
+    ```
+    ++variable;
+    ```
+
+    or **postfix**:
+
+    ```
+    variable++;
+    ```
+
+    these **two forms** have **different values** in expressions, but **both** increment or decrement **variable**
+
+4. The way to **cope** with **big numbers** is to use **long** integer type or **even bigger** numbers **double** float type.
+
+5. **While** and **For** Loops run test condition at their top.
