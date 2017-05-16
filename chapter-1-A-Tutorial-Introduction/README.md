@@ -505,3 +505,75 @@ $ gcc -o count-char-v2 count-char-v2.c
 
 $ ./count-char-v2
 ```
+
+---
+
+## 1.5.3 Line Counting
+Counting lines in input.
+
+### Key Points:
+
+1. **Standart Library** ensures that input text streams appears as a sequence of lines, each terminated by a newline. Counting lines is just counting newlines('\n'). 
+
+2.  Character written between **single quotes** represents an **integer** value equal to the **numerical** value of the character in the machine's character set. Called **character constant**, although it is just another way to write a **small integer**.
+
+    Example:
+
+    > 'A' is a **character constant**
+    >
+    > in **ASCI** its value is **65**, escape characters are also legal in character constants, so **'\n'** stands for the **value** of the **newline** character, which is **10** in **ASCI**. 
+
+### Compile and run the code:
+
+Assuming one uses gcc as a compiler run in shell:
+
+```
+$ gcc -o count-lines count-lines.c
+
+$ ./count-lines
+```
+
+### Exercises:
+
+#### Exercise 1-8
+  Write a program to count the amount of space in the input.
+  i.e. count amount of Blanks, Tabs, Newlines.
+  
+  bonus: Vertical Tab, Formfeed, Carriage Return.
+
+  Refer to **count-space.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o count-space count-space.c
+
+$ ./count-space
+```
+
+#### Exercise 1-9
+  Write program to escape multiple blanks when copying from input to output.
+
+  Refer to **escape-multiple-blanks.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o escape-multiple-blanks escape-multiple-blanks.c
+
+$ ./escape-multiple-blanks
+```
+
+
+#### Exercise 1-10
+  Write a program to explicitly state escape sequences: **tab** as **\t**, **backspace** as **\b**, and each **backslash** as **\\\\**.
+
+  Refer to **explicit-escape-sequence.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o explicit-escape-sequence explicit-escape-sequence.c
+
+$ ./explicit-escape-sequence
+```
