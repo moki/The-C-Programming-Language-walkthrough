@@ -564,7 +564,6 @@ $ gcc -o escape-multiple-blanks escape-multiple-blanks.c
 $ ./escape-multiple-blanks
 ```
 
-
 #### Exercise 1-10
   Write a program to explicitly state escape sequences: **tab** as **\t**, **backspace** as **\b**, and each **backslash** as **\\\\**.
 
@@ -576,4 +575,61 @@ $ ./escape-multiple-blanks
 $ gcc -o explicit-escape-sequence explicit-escape-sequence.c
 
 $ ./explicit-escape-sequence
+```
+
+---
+
+## 1.5.3 Word Counting
+Lines words and characters.
+
+## Key points:
+
+1. **Logical** operators.
+  
+    > **&&** Operator for **AND**
+    >
+    > **||** Operator for **OR**
+
+   **AND** operator precedence is just higher than **OR**.
+   **chained** logical **expressions** are **evaluated left to right** and its evaluation **guaranteed** to **stop** **as soon** as the **truth** or **falsehood** is **known**.
+
+2. **else** construct.
+
+    Specifies an alternative action if the condition part of an if statement is false.
+
+    ### Example:
+
+    ```
+    if (expression) {
+      // statement_1
+    } else {
+      // statement_2
+    }
+    ```
+
+    Only one of the of the two statements associated with an if else is preformed. 
+
+### Compile and run the code:
+
+Assuming one uses gcc as a compiler run in shell:
+
+```
+$ gcc -o wc wc.c
+
+$ ./wc
+```
+
+### Exercises:
+
+#### Exercise 1-12
+  Write a program that prints input one word per line.
+
+  Refer to **split-words-with-new-line.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o split-words-with-new-line split-words-with-new-line.c
+
+$ ./split-words-with-new-line
 ```
