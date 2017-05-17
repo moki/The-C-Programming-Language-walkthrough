@@ -746,3 +746,21 @@ $ gcc -o fn-fahr-to-cels fn-fahr-to-cels.c
 
 $ ./fn-fahr-to-cels
 ```
+
+---
+
+## 1.8 Arguments - Call by value
+
+Key points:
+
+1. All fn arguments are **passed by value**.
+    
+    Meaning that the called **function** is **given** the **values** of its arguments in **temporary variables** rather than the originals, i.e local copy.
+
+2. **Except** for **Arrays**
+
+    When the name of the **array** is **used** as an **argument**, the **value passed** to the function is the **location** or **address** of the **beginning** of the **array** - **there is no copying of array elements**.
+
+3. **Pointers**
+
+    Using **pointers** it is **possible** to arrange for a function to **modify** a **variable in calling routine**.
