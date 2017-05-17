@@ -633,3 +633,65 @@ $ gcc -o split-words-with-new-line split-words-with-new-line.c
 
 $ ./split-words-with-new-line
 ```
+
+---
+
+## 1.6 Arrays
+Writing a program to count the number of occurrences of each digit, of white space characters, and all of other characters.
+
+## Key points:
+
+1. **Declaration**.
+
+    ```
+    int digits[10]
+    ```
+
+    where **int** is **type** of the **array**
+
+    **digits** variabel **name** of the **array**
+
+    **10** is a **subscript**, which can be **any integer expression**, includes
+    **integer variables** like **i** and integer **constants**
+
+2. **Chars ASCII**
+
+    by definition **chars** are just **small integers**, so char **variables** and **constants** are **identical** to **ints** in arithmetic expressions.
+
+### Compile and run the code:
+
+Assuming one uses gcc as a compiler run in shell:
+
+```
+$ gcc -o count-digits-white-space-chars count-digits-white-space-chars.c
+
+$ ./count-digits-white-space-chars
+```
+
+### Exercises:
+
+#### Exercise 1-13
+  Write a program to print a histogram of the lengths of words in its input.
+
+  Refer to **words-length-hist.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o words-length-hist words-length-hist.c
+
+$ ./words-length-hist
+```
+
+#### Exercise 1-14
+  Write a program to print a histogram of the frequencies of different characters in its input.
+
+  Refer to **chars-freq-hist.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o chars-freq-hist chars-freq-hist.c
+
+$ ./chars-freq-hist
+```
