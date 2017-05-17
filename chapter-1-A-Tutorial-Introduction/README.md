@@ -695,3 +695,54 @@ $ gcc -o chars-freq-hist chars-freq-hist.c
 
 $ ./chars-freq-hist
 ```
+
+---
+
+## 1.7 Functions
+Convenient way to encapsulate some computation.
+
+## Key points:
+
+1. **Definition**
+
+    > return-**type** function-**name**(parameter declaration, if any in form: **type** **name**) {
+    >
+    > &nbsp;&nbsp;&nbsp;&nbsp;**function code**
+    >
+    > }
+
+2. **Parameter** variable in function declaration
+
+3. **Argument** variable passed to function call
+
+4. **return** is a way to return value from function
+
+    return **without value** returns **control** to the **caller function**.
+
+5. **main() return**
+
+    return **value** of **0** from main function **implies normal termination**.
+    **non zero** values indicate **unusual or erroneous** terminal **conditions**.
+
+### Compile and run the code:
+
+Assuming one uses gcc as a compiler run in shell:
+
+```
+$ gcc -o exponent exponent.c
+
+$ ./exponent
+```
+
+#### Exercise 1-15
+  Rewrite temperature conversion program of Section 1.2 to use a function for conversion.
+
+  Refer to **fn-fahr-to-cels.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o fn-fahr-to-cels fn-fahr-to-cels.c
+
+$ ./fn-fahr-to-cels
+```
