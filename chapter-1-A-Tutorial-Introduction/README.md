@@ -582,7 +582,7 @@ $ ./explicit-escape-sequence
 ## 1.5.3 Word Counting
 Lines words and characters.
 
-## Key points:
+### Key points:
 
 1. **Logical** operators.
   
@@ -639,7 +639,7 @@ $ ./split-words-with-new-line
 ## 1.6 Arrays
 Writing a program to count the number of occurrences of each digit, of white space characters, and all of other characters.
 
-## Key points:
+### Key points:
 
 1. **Declaration**.
 
@@ -701,7 +701,7 @@ $ ./chars-freq-hist
 ## 1.7 Functions
 Convenient way to encapsulate some computation.
 
-## Key points:
+### Key points:
 
 1. **Definition**
 
@@ -734,6 +734,8 @@ $ gcc -o exponent exponent.c
 $ ./exponent
 ```
 
+### Exercises:
+
 #### Exercise 1-15
   Rewrite temperature conversion program of Section 1.2 to use a function for conversion.
 
@@ -751,7 +753,7 @@ $ ./fn-fahr-to-cels
 
 ## 1.8 Arguments - Call by value
 
-Key points:
+### Key points:
 
 1. All fn arguments are **passed by value**.
     
@@ -764,3 +766,78 @@ Key points:
 3. **Pointers**
 
     Using **pointers** it is **possible** to arrange for a function to **modify** a **variable in calling routine**.
+
+---
+
+## 1.9 Character Arrays
+The most common type of arrays in the c is the array of characters.
+
+### Key points:
+
+  1. **End** of the string - **\0**
+    
+      End of the string is specified with character **'\0'** in the array of the characters.
+
+### Compile and run the code:
+
+Assuming one uses gcc as a compiler run in shell:
+
+```
+$ gcc -o longest-line longest-line.c
+
+$ ./longest-line
+```
+
+### Exercises:
+
+#### Exercise 1-16
+  Revise the main routine of the longest line program so it will correctly print the length of arbitrarily long input lines, and as much as possible of the text.
+
+  Refer to **longest-line-rev.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o longest-line-rev longest-line-rev.c
+
+$ ./longest-line-rev
+```
+
+#### Exercise 1-17
+  Write a program to print all input lines that are longer than 80 characters.
+
+  Refer to **print-more-than-80.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o print-more-than-80 print-more-than-80.c
+
+$ ./print-more-than-80
+```
+
+#### Exercise 1-18
+  Write a program to remove trailing blanks and tabs from each line of input, and to delete entirely blank lines.
+
+  Refer to **strip-line.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o strip-line strip-line.c
+
+$ ./strip-line
+```
+
+#### Exercise 1-19
+  Write a function to reverse the character string. Use it to write a program that reverses its input a line at a time.
+
+  Refer to **reverse-string.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o reverse-string reverse-string.c
+
+$ ./reverse-string
+```
