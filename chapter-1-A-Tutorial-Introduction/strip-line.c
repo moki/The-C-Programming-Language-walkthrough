@@ -38,7 +38,7 @@ int main() {
 
     printf("line length after strip: %d\n", k);
 
-    printf("line withput trailing spaces:\n%s", line);
+    printf("line without trailing spaces:\n%s", line);
   }
 }
 

@@ -841,3 +841,82 @@ $ gcc -o reverse-string reverse-string.c
 
 $ ./reverse-string
 ```
+
+---
+
+## 1.10 External Variables and Scope
+The most common type of arrays in the c is the array of characters.
+
+### Key points:
+
+  1. **Local** variables - automatic.
+    
+      Each local variable in function comes into existance only when the function is called, and disappears when the function
+      exits. This is why such functions known as **automatic**
+
+  2. **External** variables - external to all functions.
+
+      Variables that can be accessed by name by any function, globally accessable thus can be used instead of function arguments,
+      they retain their values even after the functions that set them have returned.
+
+      must be **defined** exactly **once** outside of any function, that sets **storage** for it.
+
+      Also must be **declared** in each **function** that wants **access** it. this **states** **type** of the variable.
+
+  2. **extern** declaration can be **omitted** if the it was **defined** in the **same file**.
+
+  3. **Usual practice** is to collect **extern** declarations of variables and functions in the separate file, historically called **header**, that is included by **#include** at the front of each file, the **suffix .h** is **conventional** for header **names**.
+### Compile and run the code:
+
+Assuming one uses gcc as a compiler run in shell:
+
+```
+$ gcc -o extern-longest-line extern-longest-line.c
+
+$ ./extern-longest-line
+```
+
+### Exercises:
+
+#### Exercise 1-20
+  Write a program **detab** that **replaces tabs** in the input with the proper number of blanks to space to the next tab stop.
+  Assume a fixed set of tab stops, say every **n** columns. Should n be a variable or a symbolic parameter?
+
+  **n** should be a variable, to allow different tab size option.
+
+  Refer to **detab.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o detab detab.c
+
+$ ./detab
+```
+
+#### Exercise 1-21
+  Write a program **entab** that **replaces strings of blanks** in the input with the minimum number of tabs and spaces to achieve the same thing.
+
+  Refer to **entab.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o entab entab.c
+
+$ ./entab
+```
+
+#### Exercise 1-22
+  Write a program **fold** long input lines into two or more shorter lines after the last non-blank character that occurs before the n-th
+  column of input. Make sure your program does something intelligent with very long lines, and if there are no blanks or tabs before the specified column. 
+
+  Refer to **fold.c** source code file
+
+##### Compile and run the code:
+
+```
+$ gcc -o fold fold.c
+
+$ ./fold
+```
