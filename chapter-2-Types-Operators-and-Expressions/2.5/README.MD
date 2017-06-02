@@ -26,4 +26,4 @@
 
 2. The **%** operator cannot be applied to float or double. The direction of truncation for **/** and the sign of the result for **%** are machine-dependent for negative operands, as is the action taken on overflow or underflow.
 
-3. **Opeartor Precedence** - **+** and **-** have **same** precedence, which is **lower** than the precedence of *, /, and %, which in turn have **lower** than **unary** + and -. Arithmetic operators associate left to right. 
+3. **Opeartor Precedence** - **+** and **-** have **same** precedence, which is **lower** than the precedence of *, /, and %, which in turn have **lower** than **unary** + and -. Arithmetic operators associate left to right.
