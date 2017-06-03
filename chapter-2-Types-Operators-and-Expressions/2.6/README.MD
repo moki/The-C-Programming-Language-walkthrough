@@ -47,7 +47,7 @@
 
 ### Exercises:
 
-#### Exercise 2-1
+#### Exercise 2-2
   Write a loop equivalent to the for loop above without using && or ||.
   
   Refer to the code in **loop-without-logical.c**.
