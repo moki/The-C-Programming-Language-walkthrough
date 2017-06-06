@@ -1,4 +1,4 @@
-## 2.7 Increment and Decrement Operator
+## 2.8 Increment and Decrement Operator
 C provides two unusual operators to increment and decrement variables.
 
 ### Key points:
