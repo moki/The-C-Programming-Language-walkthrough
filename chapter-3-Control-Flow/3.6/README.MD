@@ -1,4 +1,4 @@
-## 3.5 Loops - Do-while
+## 3.6 Loops - Do-while
 **while** and **for** loops **test** the **termination** condition at the **top**. By **contrast** the third loop in C the **do-while**, tests at the **bottom**.
 
 ### Key points:
